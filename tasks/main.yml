@@ -5,12 +5,18 @@
     dest: /etc/locale.conf
     owner: root
     group: root
-    mode: '0644'
+    mode: 0644
 
 - name: Set Locales in locale.gen
   locale_gen:
     name: "{{ item }}"
     state: present
-  with_items: "{{ locales_gen }}"
+  with_items: "{{ locale_locales_gen }}"
 
-
+- name: Set vconsole keymap layout
+  template:
+    src: vconsole.conf.j2
+    dest: /etc/vconsole.conf
+    owner: root
+    group: root
+    mode: 0644
