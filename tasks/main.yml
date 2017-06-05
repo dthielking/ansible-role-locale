@@ -20,8 +20,3 @@
     owner: root
     group: root
     mode: 0644
-
-- name: Restart systemd vconsole setup
-  service:
-    name: systemd-vconsole-setup
-    state: restarted
