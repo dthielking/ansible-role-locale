@@ -3,20 +3,25 @@ Role Name
 
 This role configures your locale on your system.
 
-Requirements
-------------
-
-No requirements
-
 Role Variables
 --------------
+```
+locales_locale_conf:
+  LANG: en_US.UTF-8
+  LANGUAGE: en_US.UTF-8
+  LC_CTYPE: en_US.UTF-8
+  LC_ALL: en_US.UTF-8
+```
+If sufficient you can change the display defaults so that you get e.g German phone number styles. man locale.conf
+```
+locales_locale_gen:
+  - en_US.UTF-8
+  - en_US
+```
+Use this variable to setup your locales on your server. You can specify any locale which is available in _/etc/locale.gen_.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-No dependencies
+`locale_vconsole_keymap: us`
+This variable is used to set your vconsole keymap.
 
 Example Playbook
 ----------------
@@ -31,5 +36,5 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+MIT
 
