@@ -11,4 +11,9 @@ locale_locales_gen:
   - en_US
 
 # Set vconsole layout
-locale_vconsole_keymao: us
+locale_vconsole_keymap: us
+
+# Keyboard layout (Debian)
+locale_keyboard_layout:
+ XKBMODEL: pc105
+ XKBLAYOUT: de
