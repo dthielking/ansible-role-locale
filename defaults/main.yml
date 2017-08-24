@@ -15,5 +15,5 @@ locale_vconsole_keymap: us
 
 # Keyboard layout (Debian)
 locale_keyboard_layout:
- XKBMODEL: pc105
- XKBLAYOUT: de
+  XKBMODEL: pc105
+  XKBLAYOUT: de
