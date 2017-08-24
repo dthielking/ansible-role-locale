@@ -1,0 +1,5 @@
+---
+- name: restart keyboard-setup
+  service:
+    name: keyboard-setup
+    state: restarted
